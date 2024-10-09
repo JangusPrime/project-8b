@@ -1,17 +1,17 @@
 :root {
-    --color-primary: #ab79d6;  /* Purple */
-    --color-secondary: #d367c1; /* Pink */
-    --color-background: #27272c; /* Dark Gray */
-    --color-on-background: #c5c5ce; /* Light Gray */
-    --color-accent1: #dedf40; /* Yellow */
-    --color-accent2: #62cb5c; /* Green */
-    --color-accent3: #00bbcb; /* Turquoise */
-    --color-accent4: #f06292; /* Another Pink */
-    --color-accent5: #ff9800; /* Orange */
-    --color-accent6: #795548; /* Brown */
+    --color-primary: #ab79d6;
+    --color-secondary: #d367c1;
+    --color-background: #27272c;
+    --color-on-background: #c5c5ce;
+    --color-accent1: #dedf40;
+    --color-accent2: #62cb5c;
+    --color-accent3: #00bbcb;
+    --color-accent4: #f06292;
+    --color-accent5: #ff9800; 
+    --color-accent6: #795548;
     --color-gradient: linear-gradient(to right, var(--color-primary), var(--color-accent1), var(--color-accent2), var(--color-accent3), var(--color-secondary));
     --highlight-gradient: linear-gradient(to right, var(--color-secondary), var(--color-accent3));
-    --brand-font: 'Kanit', serif;
+    --brand-font: 'Kanit', sans-serif; /* Changed to sans-serif */
     --brand-font-alt: 'Baloo 2', sans-serif;
 }
 
@@ -26,56 +26,82 @@ body {
     flex-direction: column;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 20px;
+    padding: 40px; /* Increased padding */
     background: var(--color-gradient);
     color: var(--color-on-background);
     font-family: var(--brand-font);
     font-weight: 800;
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px; /* Ensure minimum height */
 }
 
 .highlight-title {
     background: var(--highlight-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; 
-    color: transparent;    
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 10px; 
 }
 
 .byline {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
 }
 
+/* General Styles */
 a {
     color: var(--color-primary);
     text-decoration: none;
+    transition: color 0.2s ease; /* Add transition for hover effect */
+}
+
+a:hover {
+    color: var(--color-accent3); /* Change color on hover */
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increased padding */
     color: white;
-    background-color: var(--color-accent4); /* Use a different accent color */
+    background-color: var(--color-accent4);
     border-radius: 5px;
-    margin-top: 10px;
-    font-size: 1rem;
+    margin-top: 20px; /* Increased margin */
+    font-size: 1.2rem; /* Increased font size */
+    transition: background-color 0.2s ease; /* Add transition */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add cursor style */
 }
 
+.button:hover {
+    background-color: var(--color-secondary); /* Change color on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 40px; /* Increased padding */
+    margin-bottom: 40px; /* Added margin */
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+/* Promo Section */
 .promo {
     text-align: center;
-    background-color: var(--color-accent5); /* Use an accent color */
-    padding: 20px;
-    margin: 20px 0; 
-    border: 3px solid transparent;
-    border-image: var(--color-gradient) 1;
+    background-color: var(--color-accent5);
+    padding: 30px; /* Increased padding */
+    margin: 40px 0; /* Increased margin */
+    border: none; /* Remove border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-footer {
-    background-color: var(--color-accent6); /* Use an accent color */
-    color: var(--color-on-background);
-    padding: 10px;
-    text-align: center;
-    margin-top: auto; 
-}
+/* ... (rest of the styles) */
