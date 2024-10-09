@@ -1,10 +1,16 @@
 :root {
-    --color-primary: #ab79d6;
-    --color-secondary: #d367c1;
-    --color-background: #27272c;
-    --color-on-background: #c5c5ce;
-    --color-gradient: linear-gradient(to right, #d367c1, #dedf40, #62cb5c, #00bbcb, #ab79d6);
-    --highlight-gradient: linear-gradient(to right, #d367c1, #00bbcb);
+    --color-primary: #ab79d6;  /* Purple */
+    --color-secondary: #d367c1; /* Pink */
+    --color-background: #27272c; /* Dark Gray */
+    --color-on-background: #c5c5ce; /* Light Gray */
+    --color-accent1: #dedf40; /* Yellow */
+    --color-accent2: #62cb5c; /* Green */
+    --color-accent3: #00bbcb; /* Turquoise */
+    --color-accent4: #f06292; /* Another Pink */
+    --color-accent5: #ff9800; /* Orange */
+    --color-accent6: #795548; /* Brown */
+    --color-gradient: linear-gradient(to right, var(--color-primary), var(--color-accent1), var(--color-accent2), var(--color-accent3), var(--color-secondary));
+    --highlight-gradient: linear-gradient(to right, var(--color-secondary), var(--color-accent3));
     --brand-font: 'Kanit', serif;
     --brand-font-alt: 'Baloo 2', sans-serif;
 }
@@ -29,12 +35,12 @@ body {
     font-weight: 800;
 }
 
-.highlight-title { 
+.highlight-title {
     background: var(--highlight-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; /* Standard property */
-    color: transparent;    /* Fallback for non-supporting browsers */
+    background-clip: text; 
+    color: transparent;    
 }
 
 .byline {
@@ -51,7 +57,7 @@ a {
     display: inline-block;
     padding: 10px 20px;
     color: white;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent4); /* Use a different accent color */
     border-radius: 5px;
     margin-top: 10px;
     font-size: 1rem;
@@ -59,7 +65,7 @@ a {
 
 .promo {
     text-align: center;
-    background-color: #1e1c22;
+    background-color: var(--color-accent5); /* Use an accent color */
     padding: 20px;
     margin: 20px 0; 
     border: 3px solid transparent;
@@ -67,7 +73,7 @@ a {
 }
 
 footer {
-    background-color: #1e1c22;
+    background-color: var(--color-accent6); /* Use an accent color */
     color: var(--color-on-background);
     padding: 10px;
     text-align: center;
